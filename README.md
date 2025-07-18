@@ -29,7 +29,7 @@ This is a simple template for C / C++ projects using SFML, OpenGL and Dear ImGUI
 
 ## ✨ Features
 
-- 🔄 **Reproducible**: Built on NixOS, this configuration can be effortlessly reproduced on other
+- 🔄 **Reproducible**: Built with Nix, this configuration can be effortlessly reproduced on other
   machines, ensuring a consistent setup.
 
 - 📖 **Documented**: Most of the parts of my configuration files are commented and documented with
@@ -89,7 +89,7 @@ git clone https://github.com/leoraclet/sfml-imgui-template
 cd sfml-imgui-template
 ```
 
-> [!WARNING]
+> [!TIP]
 >
 > Now, **direnv** should load the environment when inside the project directory, if not, try
 > ```bash
@@ -126,8 +126,12 @@ You can start by installing nix [here](https://nixos.org/download/#nix-install-w
 
 ## 🚀 Releases
 
-To run the program without editing the source code or building it yourself, go see the
-[**Releases**](https://github.com/leoraclet/sfml-imgui-template/releases).
+~~To run the program without editing the source code or building it yourself, go see the
+[**Releases**](https://github.com/leoraclet/sfml-imgui-template/releases).~~
+
+> [!WARNING]
+>
+> This is template repo, so threre isn't releases for this one
 
 ## 📜 License
 
