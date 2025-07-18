@@ -46,12 +46,12 @@ This is a simple template for C / C++ projects using SFML, OpenGL and Dear ImGUI
   - [**`docs`**](./docs/) - Documentation
   - [**`tests`**](./tests/) - Test files
   - [**`build`**](./docs/) - CMake build files
-  - [**`bin`**](./docs/) - Shared libraries if needed
+  - [**`bin`**](./docs/) - Shared libraries (if needed)
 
 - **Files**
 
   - `flake.nix` - Environment configuration (based on [**dev-templates**](https://github.com/the-nix-way/dev-templates))
-  - `.envrc` - Used by **direnv**
+  - `.envrc` - Used by **direnv** to load **Flakes**
   - `flake.lock` - Used by **Flakes** to version packages
 
 ## 📚 Libraries
@@ -70,10 +70,6 @@ This is a simple template for C / C++ projects using SFML, OpenGL and Dear ImGUI
 
 ## 🔧 Build
 
-> [!WARNING]
->
-> I have **NOT** tested the building process on Windows, so you're basically on your own for this.
-
 ### Nix (recommended for MacOS and Linux)
 
 > [!NOTE]
@@ -84,9 +80,9 @@ This is a simple template for C / C++ projects using SFML, OpenGL and Dear ImGUI
 To build this project, first make sure you have [Nix](https://nixos.org/download/) installed as a
 package manager and [direnv](https://direnv.net/) as a shell extension.
 
-Then configure it to enable [Flakes](https://nixos.wiki/wiki/flakes) according to your setup.
+Then, configure it to enable [Flakes](https://nixos.wiki/wiki/flakes) according to your setup.
 
-Once you're ready,
+Once you're ready, you can start by cloning this repo
 
 ```bash
 git clone https://github.com/leoraclet/sfml-imgui-template
@@ -100,7 +96,7 @@ cd sfml-imgui-template
 > direnv allow
 > ```
 
-The `flake.nix` file is where the project environment is defined, and you can see it in it that
+The `flake.nix` file is where the project's environment is defined, and you can see in it that
 [CMake](https://cmake.org/) is part of the packages. So, if everything went well, you should be able to
 build the project like so
 
@@ -117,6 +113,10 @@ Then, you can run the produced executable in `build` with
 ```
 
 ### Windows (WSL)
+
+> [!WARNING]
+>
+> I have **NOT** tested the building process on Windows, so you're basically on your own for this.
 
 The best solution to build this project on Windows is to use
 [WSL](https://learn.microsoft.com/en-us/windows/wsl/install) and follow the
