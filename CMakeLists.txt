@@ -1,27 +1,28 @@
 cmake_minimum_required(VERSION 3.31)
-project(cpp_skeleton)
 
-# C++ compile flags
+# Project name This will be used as the executable name and the CMake project name.
+project(example)
+
+# C++ compile flags Windows uses MSVC, while Linux and macOS use GCC/Clang
 if(MSVC)
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /W4")
 else()
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra -Wpedantic -std=c++11")
 endif()
 
-# Directories
+# Directories Set the directories for ImGUI, SFML, and other libraries
 set(IMGUI_SRC_DIR libs/imgui)
 set(LIB_SFML_PATH libs/sfml)
 set(LIB_DIR libs)
 set(INCLUDE_DIR includes)
 set(SRC_DIR src)
-
 set(BUILD_SHARED_LIBS ON)
 
 # Load OpenGL
 set(OpenGL_GL_PREFERENCE "GLVND")
 find_package(OpenGL REQUIRED)
 
-# Load SFML
+# Load SFML with provided path to the SFML libraries
 find_package(
     SFML 2.6.1 COMPONENTS REQUIRED
     system
@@ -31,6 +32,9 @@ find_package(
 )
 
 # Load source and header files
+# This will search for all .cpp files in the src directory and all .hpp files in the includes directory
+# and store them in the SOURCES and HEADERS variables respectively.
+# You can also specify individual files if you prefer.
 file(GLOB_RECURSE SOURCES ${SRC_DIR}/*.cpp)
 file(GLOB_RECURSE HEADERS ${INCLUDE_DIR}/*.hpp)
 
