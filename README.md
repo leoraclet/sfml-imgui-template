@@ -1,4 +1,4 @@
-<div align="center"><img src="assets/misc/sfml-logo.png"></div>
+<div align="center"><img style="width: 400px;scale: 125%" src="assets/misc/sfml-logo.png"></div>
 <h1 align="center">SFML + OpenGL + Dear ImGUI</h1>
 
 <div align="center">
@@ -6,6 +6,11 @@
 ![license](https://img.shields.io/github/license/leoraclet/sfml-imgui-template)
 ![language](https://img.shields.io/github/languages/top/leoraclet/sfml-imgui-template)
 ![lastcommit](https://img.shields.io/github/last-commit/leoraclet/sfml-imgui-template)
+<br>
+![Language](https://img.shields.io/badge/Language-C++-1d50de)
+![Libraries](https://img.shields.io/badge/Framework-SFML-fa8925)
+![Size](https://img.shields.io/badge/Size-91Mo-f12222)
+![Open Source](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)
 
 </div>
 
@@ -53,6 +58,7 @@ This is a simple template for C / C++ projects using SFML, OpenGL and Dear ImGUI
   - `flake.nix` - Environment configuration (based on [**dev-templates**](https://github.com/the-nix-way/dev-templates))
   - `.envrc` - Used by **direnv** to load **Flakes**
   - `flake.lock` - Used by **Flakes** to version packages
+  - `CMakeLists.txt` -  CMake configuration to build the project
 
 ## 📚 Libraries
 
@@ -131,7 +137,7 @@ You can start by installing nix [here](https://nixos.org/download/#nix-install-w
 
 > [!WARNING]
 >
-> This is template repo, so threre isn't releases for this one
+> This is template repo, so threre isn't releases for this one.
 
 ## 📜 License
 
